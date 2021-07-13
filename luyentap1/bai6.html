@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính hoa hồng</title>
+</head>
+<body>
+<script>
+let doanhso = +prompt('nhập vào doanh số');
+let thuong =0;
+//giẢ SỬ doanh số 1 tháng lớn hơn 50 thưởng 10% doanh số
+    //lớn hơn 20 thưởng 5% doanh số;
+    if (doanhso> 50){
+        thuong = (doanhso*10)/100;
+        alert('hoa hồng của bạn là :'+ thuong);
+    }else if (doanhso > 20){
+        thuong = (doanhso *5)/100;
+        alert('hoa hồng  khuyến khích của bạn là:'+thuong);
+    }else {
+        alert('làm như sịt mà đòi có hoa hồng mơ đi cưng');
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính thuế thu nhập cá nhân</title>
+</head>
+<body>
+<script>
+    let mony = +prompt('nhạp vào thu nhập 1 năm');
+    if ( mony < 60){
+        let thue = mony*5/100;
+        alert('tiền thuế là:'+thue+'triệu đồng');
+    }else if (mony < 120){
+        alert('tiền thuế là:'+ mony*10/100+'triệu đồng');
+    }else {
+        alert('tiền thuế là: nhiều tiền thế cướp đâu ra đấy');
+    }
+</script>
+</body>
+</html>

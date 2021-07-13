@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính chỉ số cân nặng</title>
+</head>
+<body>
+<form style="background-color: darkorange ;
+width: 200px;height: 200px;text-align: center">
+    Enter Weight :<br>
+<input type="number" id="weight"><br>
+    Enter Height:<br>
+<input type="number" id="height"><br>
+<button onclick="bmis()">click</button>
+<p id="kq">hello</p>
+</form>
+
+<script>
+    function bmis() {
+        let weight = +document.getElementById('weight').value;
+        let height = +document.getElementById('height').value;
+        let bmi = weight / (height * height);
+        console.log('bmi =',bmi)
+        if (bmi < 18) {
+            document.getElementById('kq').innerHTML = 'Underweight (thieu can)';
+        } else if (bmi < 25.0) {
+            document.getElementById('kq').innerHTML = 'Normal (binh thuong)';
+        } else if (bmi < 30) {
+            document.getElementById('kq').innerHTML = 'Overweight (thua can)';
+        } else {
+            document.getElementById('kq').innerHTML = 'Obese (beo phi)';
+        }
+    }
+</script>
+</body>
+</html>

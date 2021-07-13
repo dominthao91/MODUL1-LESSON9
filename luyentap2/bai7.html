@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>giải phương trình bậc 2</title>
+</head>
+<body>
+<script>
+    let a = +prompt ('nhập vào số a');
+    let b = +prompt ('nhập vào số b');
+    let c = +prompt ('nhập vào số c');
+    let delta = b*b -4*a*c;
+    if (delta<0){
+        alert ('phương trình vô nghiệm');
+    }else if (delta==0){
+        let x=-b/(2*a);
+        alert ('phương trình có nghiệm kép là' +x);
+    } else {
+        //x1 = -b+căn bậc 2 delta chia 2a
+        let x1 = (-b+Math.sqrt(delta))/(a*2);
+        alert ('nghiệm x1 là :' +x1);
+        let x2 = (-b-Math.sqrt(delta))/(a*2);
+        alert ('nghiệm x2 là:' + x2);
+    }
+</script>
+</body>
+</html>

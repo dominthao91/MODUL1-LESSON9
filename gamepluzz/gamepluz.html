@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>game</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="jquery assignment 3 puzzle">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="author" content="Adam Shechter">
+</head>
+<body>
+<!--    <img src="image/ngoctrinh.jpg" height="500" width="400"/></div>-->
+<div onclick="undo('a1')">
+    <img id="a1" src="image/ngoctrinh0.jpg" height="150" width="300"/>
+</div>
+<div onclick="undo2('a2')">
+    <img id="a2" src="image/a1.jpg" height="150" width="300"/>
+</div>
+<div onclick="undo3('a3')">
+    <img id="a3" src="image/a3.jpg" height="150" width="300"/>
+</div>
+<div onclick="unndo4('a4')">
+    <img id="a4" src="image/anh4.png" height="150" width="300"/>
+</div>
+<script>
+    function undo(val) {
+        let random = Math.round(Math.random() * 3);
+        switch (random) {
+            case 1:
+                document.getElementById(val).src = "image/anh1.jpg";
+                break;
+            case 2:
+                document.getElementById(val).src = "image/a1.jpg";
+                break;
+            case 3:
+                document.getElementById(val).src = "image/ngoctrinh0.jpg";
+                break;
+        }
+    }
+
+    function undo2(val) {
+        let random = Math.round(Math.random() * 3);
+        switch (random) {
+            case 1:
+                document.getElementById(val).src = "image/anh2.jpg";
+                break;
+            case 2:
+                document.getElementById(val).src = 'image/a2.jpg';
+                break;
+            case 3:
+                document.getElementById(val).src = 'image/ngoctrinh1.jpg';
+                break;
+        }
+    }
+
+    function undo3(val) {
+        let random = Math.round(Math.random() * 3);
+        switch (random) {
+            case 1:
+                document.getElementById(val).src = 'image/a3.jpg';
+                break;
+            case 2:
+                document.getElementById(val).src = 'image/anh3.jpg';
+                break;
+            case 3:
+                document.getElementById(val).src = "image/ngoctrinh2.jpg";
+                break;
+        }
+    }
+
+    function unndo4(val) {
+        let random = Math.round(Math.random() * 3);
+        switch (random) {
+            case 1:
+                document.getElementById(val).src = "image/a4.png";
+                break;
+            case 2:
+                document.getElementById(val).src = "image/ngoctrinh4.png";
+                break;
+            case 3:
+                document.getElementById(val).src = "image/anh4.png";
+                break;
+        }
+    }
+
+    function checke() {
+        let img1 = document.getElementById('a1').getAttribute('src');
+        let img2 = document.getElementById('a2').getAttribute('src');
+        let img3 = document.getElementById('a3').getAttribute('src');
+        let img4 = document.getElementById('a4').getAttribute('src');
+
+        if ((img1 === "image/ngoctrinh0.jpg") && (img2 === "image/ngoctrinh1.jpg")
+            && (img3 === "image/ngoctrinh2.jpg") && (img4 === "image/ngoctrinh4.png")) {
+            alert('xin chúc mừng thí chủ');
+        }
+    }checke();
+
+</script>
+</body>
+</html>

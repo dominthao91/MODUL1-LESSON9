@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xếp hạng học lực</title>
+</head>
+<body>
+<script>
+    let a = +prompt('nhập vào điểm thi giữa kỳ');
+    let b = +prompt('nhạp vào điểm thi cuối kỳ');
+    let hocluc = (a+b)/2;
+    if (hocluc < 5){
+        alert(hocluc+'học lực yếu');
+    }else if (hocluc>5 && hocluc<7){
+        alert(hocluc+'học lực trung bình khá');
+    }else {
+        alert(hocluc+'học lực khá giỏi');
+    }
+</script>
+</body>
+</html>

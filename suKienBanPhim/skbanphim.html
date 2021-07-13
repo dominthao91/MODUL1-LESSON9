@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sự kiện bàn phím</title>
+</head>
+<body>
+
+<img src="../BONG.jpg" height="100" width="100" style="position: relative; top: 0;left: 0"; id="move" />
+<script>
+let moves = document.getElementById('move');
+function upMove() {
+    moves.style.top =parseInt(moves.style.top)-5+'px';
+}function downMove() {
+    moves.style.top =parseInt(moves.style.top)+5+'px';
+}function leftMove() {
+    moves.style.left =parseInt(moves.style.left)-5+'px';
+}function rightMove() {
+    moves.style.left =parseInt(moves.style.left)+5+'px';
+}
+function moveSlection(event) {
+    switch (event.keyCode) {
+        case 37:
+            leftMove();
+            break;
+            case 38:
+                upMove();
+                break;
+                case 39:
+                    rightMove();
+                    break;
+                    case 40:
+                        downMove();
+                        break;
+    }
+}
+function loading() {
+    window.addEventListener('keydown', moveSlection);
+
+}loading();
+</script>
+</body>
+</html>
