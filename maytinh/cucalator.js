@@ -62,4 +62,24 @@ function chia() {
     let number = document.getElementById("in").value;
     document.getElementById("in").value = number +'/';
 }
-
+//cách 2.gắn vlue cho tất cả các button rồi thực thi hàm này;
+// <script>
+// let flag = false; // Kỹ thuật đặt cờ
+// function inputValue(value) {
+//     if (value == '=') {
+//         flag = true;
+//         if (document.getElementById('result').value != "") {
+//             document.getElementById('result').value = eval(document.getElementById('result').value);
+//         }else {
+//             alert("Nhập giá trị")
+//         }
+//     } else if (value == 'c') {
+//         document.getElementById('result').value = "";
+//     } else {
+//         if(flag){
+//             document.getElementById('result').value = "";
+//         }
+//         document.getElementById("result").value += value;
+//     }
+// }
+// </script>
