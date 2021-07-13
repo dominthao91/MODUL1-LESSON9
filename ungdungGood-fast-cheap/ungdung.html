@@ -4,7 +4,30 @@
     <meta charset="UTF-8">
     <title>good-fast-cheap</title>
 </head>
-<body>
+<input id="good" type="checkbox" onclick="chcek('good')">  GOOD <br>
+<input id="fast" type="checkbox" onclick="chcek('fast')">    FAST <br>
+<input id="cheap" type="checkbox" onclick="chcek('cheap')">    CHEAP
 
+<body>
+<script>
+   function chcek(value) {
+    let good = document.getElementById('good');
+    let fast= document.getElementById('fast');
+    let cheap = document.getElementById('cheap');
+    if (value=='good'){
+        if (fast.checked && cheap.checked){
+            cheap.checked = false;
+        }
+    }else if (value=='cheap'){
+        if (good.checked && fast.checked){
+            fast.checked = false
+        }
+    }else {
+        if (good.checked && cheap.checked){
+            good.checked=false;
+        }
+    }
+   }
+</script>
 </body>
 </html>
